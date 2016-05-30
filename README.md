@@ -8,6 +8,10 @@ GIT AUTOCOMMIT
 -------------------
 all changes will be autocommited by autocommit component. 
 
+automation/autocommit.bat
+
+same automation script used for Windows and Linux. Tested in windows 10 and Linux Debian jessie 
+
 
 DIRECTORY STRUCTURE
 -------------------
