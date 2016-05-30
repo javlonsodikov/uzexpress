@@ -8,6 +8,7 @@ dbname=`php getitem.php dbname`
 dbusername=`php getitem.php username`
 dbpassword=`php getitem.php password`
 mysqldump -u$dbusername -p$dbpassword $dbname > db_dump/$datetime.sql
+cd ..
 git pull origin master
 git add .
 git commit -m "autocommit $datetime"
@@ -28,6 +29,7 @@ for /f %%i in ('php getitem.php dbname') do set dbname=%%i
 for /f %%i in ('php getitem.php username') do set dbusername=%%i
 for /f %%i in ('php getitem.php password') do set dbpassword=%%i
 mysqldump.exe -u%dbusername% -p%dbpassword% %dbname% > db_dump\%_date%-%_time%.sql
+cd ..
 git pull origin master
 git add .
 git commit -m "autocommit %_date%-%_time%"
