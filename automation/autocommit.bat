@@ -2,15 +2,18 @@
 @ECHO OFF
 GOTO :CMDSCRIPT
 ::CMDLITERAL
-echo "Linux shell autocommit"
-
-
+echo "Linux shell git autocommit"
+datetime=`date +%m.%d.%Y-%H-%M-%S`
+dbname=`php getitem.php dbname`
+dbusername=`php getitem.php username`
+dbpassword=`php getitem.php password`
+echo "mysqldump -u$dbusername -p$dbpassword $dbname > db_dump/$datetime.sql"
 exit 0
 
 
 
 :CMDSCRIPT
-echo "windows autocommit"
+echo "windows git autocommit"
 set workdir="D:\www\yii2_composer\uzexpress\automation"
 cd %workdir%
 set _date=%DATE:/=-%
