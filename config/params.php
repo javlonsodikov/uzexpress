@@ -7,3 +7,4 @@ return [
     'thumbImgWidth'                 => 200,
     'thumbImgHeight'                => 200,
 ];
+
