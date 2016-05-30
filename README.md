@@ -28,7 +28,9 @@ REQUIREMENTS
 
 The minimum requirement by this project template that your Web server supports PHP 5.4.0.
 nodejs
+
 bower 
+
 composer
 
 
@@ -42,6 +44,7 @@ at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 You can then install this project template using the following command:
 
 composer install 
+
 bower install 
 
 ~~~
