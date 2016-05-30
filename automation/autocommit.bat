@@ -8,27 +8,31 @@ dbname=`php getitem.php dbname`
 dbusername=`php getitem.php username`
 dbpassword=`php getitem.php password`
 mysqldump -u$dbusername -p$dbpassword $dbname > db_dump/$datetime.sql
+cd ..
 git pull origin master
 git add .
 git commit -m "autocommit $datetime"
 git push origin master 
+pause
 exit 0
 
 
 
 :CMDSCRIPT
 echo "windows git autocommit"
-set workdir="D:\www\yii2_composer\uzexpress\automation"
-cd %workdir%
+rem set workdir="D:\www\yii2_composer\uzexpress\automation"
+rem cd %workdir%
 set _date=%DATE:/=-%
 set _time=%TIME::=-%
 set _time=%_time:~0,8%
 for /f %%i in ('php getitem.php dbname') do set dbname=%%i
 for /f %%i in ('php getitem.php username') do set dbusername=%%i
 for /f %%i in ('php getitem.php password') do set dbpassword=%%i
-"C:\Program Files (x86)\Ampps\mysql\bin\mysqldump.exe" -u%dbusername% -p%dbpassword% %dbname% > db_dump\%_date%-%_time%.sql
+mysqldump.exe -u%dbusername% -p%dbpassword% %dbname% > db_dump\%_date%-%_time%.sql
+cd ..
 git pull origin master
 git add .
 git commit -m "autocommit %_date%-%_time%"
 git push origin master
+pause
 exit

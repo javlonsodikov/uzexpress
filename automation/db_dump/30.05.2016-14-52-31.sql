@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.49, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.6.28, for Win32 (AMD64)
 --
--- Host: localhost    Database: aliadvanced
+-- Host: localhost    Database: uzexpress
 -- ------------------------------------------------------
--- Server version	5.5.49-0+deb8u1
+-- Server version	5.6.28
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -313,8 +313,8 @@ CREATE TABLE `user` (
   `role` int(11) NOT NULL DEFAULT '1',
   `incart_count` int(11) NOT NULL,
   `favorites_count` int(11) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`),
@@ -328,6 +328,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (1,'admin','V4Rl_XzDdG6UJ9tBcEBrRqK_XCfyChzz','$2y$13$NTbl6E1oEIqY1qoIun8Z8us6fZmab/gOEs9/zdc4p7wjYCjkuC1a.',NULL,'javlon@gmail.com',10,3,1,0,'0000-00-00 00:00:00','2016-05-29 07:50:13'),(2,'javlonuser','_d-8LzBHIlVQsLRR6ETAqBMA2t39oNEr','$2y$13$U7TXi7quFaTPtd.PMHJQeO9ImY0F8xIhPVih3HK8C4gvHIrFS4JNW',NULL,'javlonuser@gmail.com',10,2,0,0,'0000-00-00 00:00:00','2016-05-17 12:43:22'),(3,'javlon','WxLisCtGlc4oiQDNRoOnh4SzhV7agu28','$2y$13$MzB97uutYroOaXEwoCZvFexmDpxhDMOFyQ0OZas8/ZQtiTAGNHsKi',NULL,'javlonuser@yahoo.com',10,1,1,1,'0000-00-00 00:00:00','2016-05-16 16:47:51'),(4,'name','w972U5FYS8nLMLX8JhUV5FH5l0R65pyV','$2y$13$LeyXPwTFj4w.t6aRyDOkkO7CGhQXOmgsBuZF3klEDO3J3Bnb/dsCC',NULL,'name@name.com',10,1,0,0,'2016-05-19 17:07:31','2016-05-19 17:11:55');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -340,4 +341,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-30  5:05:47
+-- Dump completed on 2016-05-30 14:52:31
