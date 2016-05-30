@@ -12,6 +12,7 @@ git pull origin master
 git add .
 git commit -m "autocommit $datetime"
 git push origin master 
+pause
 exit 0
 
 
@@ -31,4 +32,5 @@ git pull origin master
 git add .
 git commit -m "autocommit %_date%-%_time%"
 git push origin master
+pause
 exit
