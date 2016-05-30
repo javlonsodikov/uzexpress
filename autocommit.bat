@@ -6,3 +6,4 @@ set /p dbpassword=<"C:\Program Files (x86)\Ampps\ampps\data\my.conf"
 git add .
 git commit -m "autocommit %_date%-%_time%"
 git push origin master 
+pause
