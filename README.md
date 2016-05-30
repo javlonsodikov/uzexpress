@@ -4,6 +4,9 @@ UzExpress shopping cart created by YII2 framework
 Used Yii 2 Basic Project Template
 admin panel created by modules 
 
+GIT AUTOCOMMIT 
+all changes will be autocommited by autocommit component. 
+
 
 DIRECTORY STRUCTURE
 -------------------
