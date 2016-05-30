@@ -115,7 +115,7 @@ CREATE TABLE `favorite_products` (
   KEY `user_id` (`user_id`),
   CONSTRAINT `favorite_products_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`),
   CONSTRAINT `favorite_products_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -166,7 +166,7 @@ CREATE TABLE `product_photos` (
   PRIMARY KEY (`product_photo_id`),
   KEY `product_id` (`product_id`),
   CONSTRAINT `product_photos_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -282,7 +282,7 @@ CREATE TABLE `roles_access` (
   UNIQUE KEY `action` (`action`,`controller`,`role_id`),
   KEY `role_id` (`role_id`),
   CONSTRAINT `roles_access_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `roles` (`role_id`) ON DELETE CASCADE ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=243 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=141 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -341,4 +341,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-30 10:45:29
+-- Dump completed on 2016-05-30 12:21:41
