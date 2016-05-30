@@ -5,5 +5,5 @@ return [
     'supportEmail'                  => 'info@uzexpress.com',
     'user.passwordResetTokenExpire' => 360000,
     'thumbImgWidth'                 => 200,
-    'thumbImgHeight'                => 200,
+    'thumbImgHeight'                => 200,  
 ];
