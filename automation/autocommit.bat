@@ -13,7 +13,6 @@ git pull origin master
 git add .
 git commit -m "autocommit $datetime"
 git push origin master 
-pause
 exit 0
 
 
