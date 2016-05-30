@@ -3,7 +3,7 @@
 return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=localhost;dbname=uzexpress',
-    'username' => 'uzexpressdb',
+    'username' => 'uzexpress',
     'password' => 'QfUHqyvKsCMHtrvE',
     'charset' => 'utf8', 
 ];
