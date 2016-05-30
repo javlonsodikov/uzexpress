@@ -7,7 +7,11 @@ datetime=`date +%m.%d.%Y-%H-%M-%S`
 dbname=`php getitem.php dbname`
 dbusername=`php getitem.php username`
 dbpassword=`php getitem.php password`
-echo "mysqldump -u$dbusername -p$dbpassword $dbname > db_dump/$datetime.sql"
+mysqldump -u$dbusername -p$dbpassword $dbname > db_dump/$datetime.sql
+git pull origin master
+git add .
+git commit -m "autocommit $datetime"
+git push origin master 
 exit 0
 
 
