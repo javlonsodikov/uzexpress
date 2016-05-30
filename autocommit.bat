@@ -1,5 +1,6 @@
 cd D:\www\yii2_composer\uzexpress
 set _date=%DATE:/=-%
 git add .
-git commit -m "autocommit %_date%" 
+git commit -m "autocommit %_date%"
+git push origin master 
 pause 
