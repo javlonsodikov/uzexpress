@@ -19,6 +19,7 @@
 -- Table structure for table `cart`
 --
 
+DROP TABLE IF EXISTS `cart`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cart` (
@@ -50,6 +51,7 @@ UNLOCK TABLES;
 -- Table structure for table `categories`
 --
 
+DROP TABLE IF EXISTS `categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `categories` (
@@ -76,6 +78,7 @@ UNLOCK TABLES;
 -- Table structure for table `company_pages`
 --
 
+DROP TABLE IF EXISTS `company_pages`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `company_pages` (
@@ -99,6 +102,7 @@ UNLOCK TABLES;
 -- Table structure for table `favorite_products`
 --
 
+DROP TABLE IF EXISTS `favorite_products`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `favorite_products` (
@@ -128,6 +132,7 @@ UNLOCK TABLES;
 -- Table structure for table `migration`
 --
 
+DROP TABLE IF EXISTS `migration`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `migration` (
@@ -151,6 +156,7 @@ UNLOCK TABLES;
 -- Table structure for table `product_photos`
 --
 
+DROP TABLE IF EXISTS `product_photos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `product_photos` (
@@ -177,6 +183,7 @@ UNLOCK TABLES;
 -- Table structure for table `product_ratings`
 --
 
+DROP TABLE IF EXISTS `product_ratings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `product_ratings` (
@@ -205,6 +212,7 @@ UNLOCK TABLES;
 -- Table structure for table `products`
 --
 
+DROP TABLE IF EXISTS `products`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `products` (
@@ -237,6 +245,7 @@ UNLOCK TABLES;
 -- Table structure for table `roles`
 --
 
+DROP TABLE IF EXISTS `roles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `roles` (
@@ -260,6 +269,7 @@ UNLOCK TABLES;
 -- Table structure for table `roles_access`
 --
 
+DROP TABLE IF EXISTS `roles_access`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `roles_access` (
@@ -289,6 +299,7 @@ UNLOCK TABLES;
 -- Table structure for table `user`
 --
 
+DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user` (
@@ -330,4 +341,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-30 10:42:45
+-- Dump completed on 2016-05-30 10:45:29
