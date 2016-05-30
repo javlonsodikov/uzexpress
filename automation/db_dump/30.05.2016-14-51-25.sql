@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.6.28, for Win32 (AMD64)
 --
--- Host: localhost    Database: aliadvanced
+-- Host: localhost    Database: uzexpress
 -- ------------------------------------------------------
 -- Server version	5.6.28
 
@@ -341,4 +341,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-05-30 14:45:29
+-- Dump completed on 2016-05-30 14:51:25
