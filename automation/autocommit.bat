@@ -18,7 +18,7 @@ exit 0
 
 :CMDSCRIPT
 echo "windows git autocommit"
-set workdir="D:\www\yii2_composer\uzexpress\automation"
+rem set workdir="D:\www\yii2_composer\uzexpress\automation"
 cd %workdir%
 set _date=%DATE:/=-%
 set _time=%TIME::=-%
