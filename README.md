@@ -51,6 +51,8 @@ at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 
 You can then install this project template using the following command:
 
+composer global require "fxp/composer-asset-plugin:~1.1.1"
+
 composer install 
 
 bower install 
