@@ -30,6 +30,5 @@ for /f %%i in ('php getitem.php password') do set dbpassword=%%i
 git pull origin master
 git add .
 git commit -m "autocommit %_date%-%_time%"
-git push origin master 
-pause
+git push origin master
 exit
