@@ -1,6 +1,7 @@
 /runtime
 # phpstorm project files
 .idea
+composer.lock
 
 # netbeans project files
 nbproject
