@@ -30,8 +30,8 @@ AppAsset::register($this);
     <?php
     NavBar::begin([
         'brandLabel' => 'UzExpress',
-        'brandUrl'   => Yii::$app->homeUrl,
-        'options'    => [
+        'brandUrl' => Yii::$app->homeUrl,
+        'options' => [
             'class' => 'navbar-inverse /*navbar-fixed-top*/ ',
         ],
     ]);
@@ -41,13 +41,13 @@ AppAsset::register($this);
         ['label' => 'Contact', 'url' => ['/site/contact']],
     ];
 
-    if (Yii::$app->user->identity->role==\app\models\User::ROLE_ADMIN) {
+    if (Yii::$app->user->identity->role == \app\models\User::ROLE_ADMIN) {
         $menuItems[] = ['label' => 'Admin Panel', 'url' => ['/admin/categories']];
     }
 
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
-        'items'   => $menuItems,
+        'items' => $menuItems,
     ]);
     NavBar::end();
     ?>
@@ -75,7 +75,6 @@ AppAsset::register($this);
                     <button class="btn btn-danger glyphicon glyphicon-search" type="button"></button>
                 </span>
 
-
             </div>
         </div>
         <div class="col-lg-4">
@@ -87,7 +86,7 @@ AppAsset::register($this);
 
             <?= Html::a('Wishes', ['wishes/index']) ?>
             <span class="badge"
-                                                                        id="favorites_count"><?= Yii::$app->user->identity->favorites_count ?></span>&nbsp;&nbsp;
+                  id="favorites_count"><?= Yii::$app->user->identity->favorites_count ?></span>&nbsp;&nbsp;
 
             <?php
             if (Yii::$app->user->isGuest) {
@@ -99,7 +98,7 @@ AppAsset::register($this);
                     . Html::a('Sign out (' . Yii::$app->user->identity->username . ')',
                         null,
                         [
-                            'href'    => 'javascript://',
+                            'href' => 'javascript://',
                             'onclick' => '$("#logoutform").submit()'
                         ])
                     . Html::endForm();
@@ -116,7 +115,6 @@ AppAsset::register($this);
     <?= Alert::widget() ?>
     <?= $content ?>
 </div>
-
 
 <footer class="footer">
     <div class="container">

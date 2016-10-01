@@ -2,6 +2,10 @@
 
 use yii\grid\GridView;
 use yii\helpers\Html;
+use yii\helpers\ArrayHelper;
+use app\modules\admin\models\RolesAccess;
+use app\modules\admin\models\Roles;
+use \common\components\Common;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\modules\admin\models\RolesAccessSearch */
@@ -21,15 +25,16 @@ $this->params['breadcrumbs'][] = $this->title;
         </p>
         <?= GridView::widget([
             'dataProvider' => $dataProvider,
-            'filterModel'  => $searchModel,
-            'columns'      => [
+            'filterModel' => $searchModel,
+            'columns' => [
                 'role_access_id',
                 [
                     'attribute' => 'role_id',
-                    'value'     => function ($data) {
-                        return \app\modules\admin\models\Roles::findOne($data->role_id)->name;
+                    'value' => function ($data) {
+                        return $data->role->name;
                     },
-                    'filter'    => \common\components\Common::getRolesDropdown(),
+                    'filter' =>
+                        Html::activeDropDownList($searchModel, 'role_id', ArrayHelper::map(Roles::find()->asArray()->all(), 'role_id', 'name'), ['class' => 'form-control', 'prompt' => '']),
                     //'format' => 'html'
                 ],
 
@@ -38,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     /*'value'     => function ($data) {
                         return \app\modules\admin\models\Roles::findOne($data->role_id)->role_id;
                     },*/
-                    'filter'    => \common\components\Common::getControllersDropdown(),
+                    'filter' => Common::getControllersDropdown(),
                     //'format' => 'html'
                 ],
                 [
@@ -46,13 +51,13 @@ $this->params['breadcrumbs'][] = $this->title;
                     /*'value'     => function ($data) {
                         return \app\modules\admin\models\Roles::findOne($data->role_id)->role_id;
                     },*/
-                    'filter'    => \common\components\Common::getControllersActionsDropdown(),
+                    'filter' => Common::getControllersActionsDropdown(),
                     //'format' => 'html'
                 ],
                 [
                     'attribute' => 'allow',
-                    'format'    => 'raw',
-                    'value'     => function ($model, $index, $widget) {
+                    'format' => 'raw',
+                    'value' => function ($model, $index, $widget) {
                         return Html::checkbox('allow[]', $model->allow, ['value' => $index, 'class' => 'allowthisaction']);
                     },
                 ],

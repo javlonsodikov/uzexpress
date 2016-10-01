@@ -60,12 +60,13 @@ class RolesAccessSearch extends RolesAccess
         // grid filtering conditions
         $query->andFilterWhere([
             'role_access_id' => $this->role_access_id,
-            'role_id'        => $this->role_id,
+            'roles_access.role_id'        => $this->role_id,
             'action'         => $this->action,
             'allow'          => $this->allow,
         ]);
 
         $query->andFilterWhere(['like', 'controller', $this->controller]);
+        $query->joinWith('role r');
 
         return $dataProvider;
     }
